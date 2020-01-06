@@ -1,0 +1,23 @@
+<!DOCTYPE xml>
+<beans>
+	<bean id="restoreAccessNotification" class="net.devstudy.resume.model.NotificationMessage">
+        <property name="subject" value="Restore access" />
+        <property name="content">
+        	<value>To restore access please click on ${restoreLink}.</value>
+        </property>
+    </bean>
+    
+    <bean id="passwordChangedNotification" class="net.devstudy.resume.model.NotificationMessage">
+        <property name="subject" value="Password changed" />
+        <property name="content">
+        	<value>This email is to notify you that the password for your account ${profile.uid} has been changed.</value>
+        </property>
+    </bean>
+    
+    <bean id="passwordGeneratedNotification" class="net.devstudy.resume.model.NotificationMessage">
+        <property name="subject" value="Password generated" />
+        <property name="content">
+        	<value>A new password for social account generated. Your credentials are: login=${profile.uid}, password=${generatedPassword}</value>
+        </property>
+    </bean>
+</beans>
